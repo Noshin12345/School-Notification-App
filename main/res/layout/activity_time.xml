@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue">
+
+    <!-- Horizontal LinearLayout to hold the title and Floating Action Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Title TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Notification"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"/>
+
+        <!-- Floating Action Button for adding new class items -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/accent_color"
+            android:contentDescription="@string/add_class"
+            android:src="@drawable/baseline_circle_notifications_24"
+            android:tint="@color/white" />
+
+    </LinearLayout>
+
+    <!-- TableLayout containing RecyclerView and FloatingActionButton -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:layout_margin="8dp"
+        android:padding="4dp">
+
+        <!-- RecyclerView for displaying class items -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:clipToPadding="false"
+                android:scrollbars="vertical"
+                android:background="@drawable/recycler_view_background"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <!-- Button to set notification -->
+    <Button
+        android:id="@+id/set_notification_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:text="Set Notification"
+        android:textColor="	#000000"
+        android:textStyle="bold"
+        android:backgroundTint="@color/blue"
+        android:outlineSpotShadowColor="@color/black"/>
+
+</LinearLayout>

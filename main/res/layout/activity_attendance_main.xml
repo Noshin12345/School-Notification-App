@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".AttendanceMainActivity">
+
+<!-- Headline TextView -->
+<TextView
+    android:id="@+id/headline"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/blue"
+    android:gravity="center"
+    android:padding="10dp"
+    android:text="Take Attendance"
+    android:textColor="@color/black"
+    android:textSize="32sp"
+    android:textStyle="bold" />
+
+<!-- RecyclerView below the Headline -->
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/headline" />
+
+<!-- FloatingActionButton -->
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="24dp"
+    android:src="@drawable/baseline_add_24"
+    app:backgroundTint="@color/blue"
+    android:tint="@color/fab_icon_color"/>
+</RelativeLayout>

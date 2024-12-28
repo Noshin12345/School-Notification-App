@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">School Notification</string>
+    <string name="Class_Routine">Class Routine</string>
+    <string name="add_class">Add Class</string>
+</resources>

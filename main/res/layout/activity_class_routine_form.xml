@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassRoutineFormActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/blue">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Class_Routine"
+                android:textAppearance="@color/cardview_light_background"
+                android:textSize="32sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:padding="15dp"
+                />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_margin="8dp"
+                android:padding="8dp">
+
+                <TableRow
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:text="Day of Week"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text=":"
+                        android:textSize="20sp"/>
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="15dp">
+
+                    <EditText
+                        android:id="@+id/etWeekDay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Select Day of Week"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:inputType="none"
+                        android:onClick="showDayOfWeekDialog"
+                    />
+
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:text="Subject"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text=":"
+                        android:textSize="20sp"/>
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="15dp">
+
+                    <EditText
+                        android:id="@+id/etSubject"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:hint="CSE489/ICT"/>
+                </TableRow>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#000000"
+                            android:text="Start Time"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#000000"
+                            android:text="End Time"
+                            android:textSize="20sp"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/startTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Enter Start Time"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:inputType="none"
+                            android:onClick="showStartTimePicker"
+                        />
+
+
+                        <EditText
+                            android:id="@+id/EndTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Enter End Time"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:inputType="none"
+                            android:onClick="showEndTimePicker"
+                        />
+
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp">
+                        <TextView
+                            android:textColor="@color/black"
+                            android:text="Additional Information"
+                            android:textSize="20sp"/>
+                        <TextView
+                            android:text=":"
+                            android:textSize="20sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginBottom="15dp">
+                        <EditText
+                            android:id="@+id/Addition"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Optional"
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="20sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:textColor="@color/black"
+                            android:text="Notification/Alarm"
+                            android:textSize="20sp"/>
+                        <TextView
+                            android:text=":"
+                            android:textSize="20sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginBottom="15dp">
+                        <RadioGroup
+                            android:id="@+id/rgNotificationAlarm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rbNotification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Notification"
+                                android:textSize="20sp"
+                                android:layout_weight="1">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:id="@+id/rbAlarm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Alarm"
+                                android:textSize="20sp"
+                                android:layout_weight="1">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:id="@+id/rbBoth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Both"
+                                android:textSize="20sp"
+                                android:layout_weight="1">
+
+                            </RadioButton>
+                        </RadioGroup>
+                    </TableRow>
+
+                </TableLayout>
+
+
+
+
+            </TableLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/buttoncancel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:backgroundTint="@color/blue"
+                    android:textColor="#000000"/>
+
+                <Button
+                    android:id="@+id/buttonsave"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Save"
+                    android:backgroundTint="@color/blue"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

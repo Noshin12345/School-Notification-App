@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#E3E377</color>
+    <color name="blue">#2896AB</color>
+    <color name="red">#E11751</color>
+    <color name="orange">#FF5722</color>
+    <color name="pink">#E05685</color>
+    <color name="green">#009688</color>
+    <color name="ash">#998F8C</color>
+
+    <!--attendance -->
+    <color name="fab_background_color">#B0C4DE</color> <!-- Example background color -->
+    <color name="fab_icon_color">#FFFFFF</color>
+    <color name="present">#98EE98</color>
+    <color name="absent">#FF6347</color>
+    <color name="normal">#F2F0DF</color>
+    <color name="accent_color">#2896AB</color>
+    <color name="selected_class_bg">#6EDBE9</color>
+
+    <!-- exam and assignment -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+</resources>
